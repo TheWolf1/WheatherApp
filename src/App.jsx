@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import axios from "axios";
 import './App.css'
 import CardWheather from './components/CardWheather'
+import Loading from "./components/Loading";
 
 function App() {
   const apiKey = "b6338e21c6080d0d84d992e13af47450";
@@ -43,9 +44,15 @@ function App() {
 console.log(wheather);
   return (
     <div className="App">
-      <div className="card-container">
-        <CardWheather wheather={wheather} changeUnits={changeUnits} units={units}/>
-      </div>
+       {
+        wheather ?
+        <div className="card-container">
+          <CardWheather wheather={wheather} changeUnits={changeUnits} units={units}/>
+        </div>
+        :
+         <Loading />
+      } 
+      
     </div>
   )
 }

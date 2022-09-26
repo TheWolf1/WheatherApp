@@ -24,7 +24,7 @@ const CardWheather = ({wheather, changeUnits, units})=>{
                     <ul>
                         <li>
                         <i className="fa-solid fa-wind"></i>
-                            Wind speed: <span>{wheather?.wind.deg} ms</span>
+                            Wind speed:  <span>{wheather?.wind.deg} ms</span>
                         </li>
                         <li>
                         <i className="fa-solid fa-cloud"></i>
